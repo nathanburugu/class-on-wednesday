@@ -1,0 +1,77 @@
+header {
+    height: 120vh;
+    padding-top:7rem ;
+    overflow: hidden;
+}
+.header-container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+/* call to action styling */
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+/* socials styling starts here */
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+.header__socials::after {
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+/* me styling starts here */
+.me {
+    background:linear-gradient(var(--color-primary), transparent) ;
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: calc(50% - 11rem) ;
+    /* transform: translateX(-50%); */
+    margin-top: 4rem;
+    /* 12rem for the top right 12 rem for the top left 0 for the bottom right and zero for the bottom left */
+    border-radius: 12rem 12rem 0 0;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+/* Scroll down option */
+.scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+/* media queries medium devices */
+@media screen and (max-width: 1024px) {
+    /* .container {
+        background: red;
+    } */
+    header {
+        height: 68vh;
+    }
+
+    
+}
+/* media queries medium devices */
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+    }
+    .header__socials,.scroll__down {
+        display: none;
+    }
+    
+}
